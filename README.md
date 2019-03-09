@@ -64,6 +64,12 @@ Connect to the client
 -  Tags (+2 points)
 -  picture
 
+### Bonus Functionalities
+-  **Bonus**
+-  Mobile Friendly (+2 points)
+-  Beautiful Icons (fontawesome) (+1 point)
+-  Custom font (not native in browser) (+1 point)
+
 ## API Routes
 
 **POST** `/login`
