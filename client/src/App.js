@@ -8,6 +8,7 @@ import { Router, Route } from "react-router-dom";
 import { connect } from "react-redux";
 import { history } from "./helpers";
 import { alertActions } from './actions';
+import UserProfile from "./components/UserProfile";
 
 class App extends Component {
   constructor(props) {
@@ -47,6 +48,7 @@ class App extends Component {
             <Route exact path="/" component={HomePage} />
             <Route path="/login" component={LoginPage} />
             <Route path="/register" component={RegisterPage} />
+            <Route path="/user/:userId" component={UserProfile} />
           </div>
         </Router>
       </div>

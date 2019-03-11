@@ -1,20 +1,20 @@
 import React from "react";
-import moment from "moment";
+import { age } from "../helpers/age";
 
 function UserCard(props) {
-  const birthdateString = props.user.birthdate;
-  const birthdate = moment.utc(birthdateString);
-  const now = moment.utc();
-  const age = now.diff(birthdate, "years");
+  const years = age(props.user);
 
   return (
     <div className="column is-one-quarter-desktop is-half-tablet">
       <div className="card">
-        <div className="card-image">
-          <figure className="image">
-            <img src={props.user.pictureUrl} alt={props.user.name}/>
-          </figure>
-        </div>
+        <a href={"/user/" + props.user.userId}>
+          <div className="card-image">
+            <figure className="image">
+              <img src={props.user.pictureUrl} alt={props.user.name}/>
+            </figure>
+          </div>
+        </a>
+
         <div className="card-content">
           <div className="media">
             <div className="media-content">
@@ -29,7 +29,7 @@ function UserCard(props) {
             <span className="icon">
               <i className="fas fa-birthday-cake"></i>
             </span>
-            {age}
+            {years}
           </div>
         </div>
       </div>

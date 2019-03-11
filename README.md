@@ -57,7 +57,7 @@ Connect to the client
 -  Have a profile with following informations (+2 points)
    -  name
    -  email
-   -  birthdate
+   -  age
    -  gender
 -  Interested in (+1 point)
 -  Description (+1 point)
