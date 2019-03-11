@@ -102,3 +102,10 @@ def logout():
     }
 
     return jsonify(response)
+
+
+@auth_blueprint.route("/users")
+def users():
+    users = User.query.all()
+    response = [user.to_json() for user in users]
+    return jsonify(response)

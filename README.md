@@ -70,6 +70,11 @@ Connect to the client
 -  Beautiful Icons (fontawesome) (+1 point)
 -  Custom font (not native in browser) (+1 point)
 
+### Candidate list (bonus +2 points)
+-  See their names and other relevant infos (+3 pints)
+-  See only the candidates of the gender I’m interested in (+1 point)
+-  See only the candidates interested in my gender (+1 point)
+
 ## API Routes
 
 **POST** `/login`
@@ -79,22 +84,23 @@ Logs the user in the system if the username and password are valid.
 Request
 ```json
 {
-  "email" : "WonderfulProudKangaroo@mail.com",
-  "password": "Password_1"
+  "email": "brandon.mason78@example.com",
+  "password": "Password_1"  
 }
 ```
 
 Response
 ```json
 {
-  "userId": "1",
-  "email": "WonderfulProudKangaroo@mail.com",
-  "name": "WonderfulProudKangaroo",
+  "birthdate": "1970-03-08",
+  "description": "Integer condimentum ligula vel pellentesque dignissim. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi congue consectetur egestas. Mauris rhoncus hendrerit dignissim. Aenean condimentum dui convallis lorem egestas tempor. Etiam odio ipsum, commodo at posuere a, facilisis ut velit. Praesent tortor est, varius sed facilisis eget, accumsan ac est. Vestibulum ullamcorper mauris sit amet elit laoreet, vitae venenatis velit molestie. Suspendisse id laoreet mi. Pellentesque non ex et justo tempus pellentesque id nec dolor. Integer iaculis felis erat. Praesent tincidunt in arcu eu aliquam. Ut vel lacus at dolor consequat consectetur eget quis libero. Aliquam et fringilla dolor, in aliquet sem. Vivamus euismod condimentum sagittis.",
+  "email": "brandon.mason78@example.com",
   "gender": "M",
   "interestedIn": "F",
-  "description": "Integer condimentum ligula vel pellentesque dignissim. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi congue consectetur egestas. Mauris rhoncus hendrerit dignissim. Aenean condimentum dui convallis lorem egestas tempor. Etiam odio ipsum, commodo at posuere a, facilisis ut velit. Praesent tortor est, varius sed facilisis eget, accumsan ac est. Vestibulum ullamcorper mauris sit amet elit laoreet, vitae venenatis velit molestie. Suspendisse id laoreet mi. Pellentesque non ex et justo tempus pellentesque id nec dolor. Integer iaculis felis erat. Praesent tincidunt in arcu eu aliquam. Ut vel lacus at dolor consequat consectetur eget quis libero. Aliquam et fringilla dolor, in aliquet sem. Vivamus euismod condimentum sagittis.",
-  "pictureURL": "https://randomuser.me/api/portraits/men/54.jpg",
-  "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1NTQyNDQyMjAsImlhdCI6MTU1MTY1MjIyMCwic3ViIjoiY2Y0NGJmNWMtMGNjYS00NWYxLWE0N2EtYTEzYjZjODU5MDU0In0.cAkWQE9bVYeRXcgNH9MFIas0VYqaLPVTcec5IYpBtsk"
+  "name": "Brandon Mason",
+  "pictureUrl": "https://d3iw72m71ie81c.cloudfront.net/male-16.jpg",
+  "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1NTQ5MDM2NjUsImlhdCI6MTU1MjMxMTY2NSwic3ViIjoxfQ.P-58YHbat93e9UL1cVm1PC42IlhwblwOaeHhq77mFHg",
+  "userId": 1
 }
 ```
 200 | when the authentication is successful
@@ -112,13 +118,13 @@ Request
 {
   "email": "ethel.moore82@example.com",
   "name": "Ethel Moore",
-  "birthdate": "2000-01-01",
+  "birthdate": "1995-01-01",
   "gender": "F",
   "interestedIn": "M",
-  "description": "Integer condimentum ligula vel pellentesque dignissim. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi congue consectetur egestas. Mauris rhoncus hendrerit dignissim. Aenean condimentum dui convallis lorem egestas tempor. Etiam odio ipsum, commodo at posuere a, facilisis ut velit. Praesent tortor est, varius sed facilisis eget, accumsan ac est. Vestibulum ullamcorper mauris sit amet elit laoreet, vitae venenatis velit molestie. Suspendisse id laoreet mi. Pellentesque non ex et justo tempus pellentesque id nec dolor. Integer iaculis felis erat. Praesent tincidunt in arcu eu aliquam. Ut vel lacus at dolor consequat consectetur eget quis libero. Aliquam et fringilla dolor, in aliquet sem. Vivamus euismod condimentum sagittis.",
-  "pictureURL": "https://randomuser.me/api/portraits/women/59.jpg",
-  "password": "Password_1",
-  "tags": [1,2]
+  "description": "Nulla a libero vel ligula vestibulum lacinia. Fusce ligula orci, consequat id turpis a, tristique ultricies leo. Praesent porta faucibus ligula a ultricies. Pellentesque eu felis maximus nulla tincidunt pellentesque bibendum sed nisl. Vivamus placerat nisl vel mauris viverra, ut tristique velit commodo. Nam id aliquam ex. Donec cursus felis ac leo pretium, ut tincidunt ipsum malesuada. Etiam lorem eros, commodo vitae tristique eu, posuere eget ipsum. Vivamus quis porta augue. Duis ac pretium lacus, eget molestie turpis. Nulla scelerisque sodales congue. Duis tortor turpis, condimentum sit amet lacus non, porttitor euismod massa. Nullam in aliquam dolor. Morbi vitae justo ut sem sodales volutpat. Aenean placerat ex ac aliquam euismod.",
+  "pictureURL": "https://d3iw72m71ie81c.cloudfront.net/natalia.JPG",
+  "password": "mypass",
+  "tags": [1,2,3,4,5]
 }
 ```
 
@@ -155,3 +161,4 @@ Response
 * [Microservices with Docker, Flask, and React](https://github.com/testdrivenio/testdriven-app-2.4)
 * [Flask](http://flask.pocoo.org/)
 * [React](https://reactjs.org/)
+* [gender formats &middot; Microformats Wiki](http://microformats.org/wiki/gender-formats)

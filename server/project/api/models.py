@@ -44,10 +44,12 @@ class User(db.Model):
             "userId": self.user_id,
             "email": self.email,
             "name": self.name,
+            "birthdate": self.birthdate.date().isoformat(),
             "gender": self.gender,
             "interestedIn": self.interested_in,
             "description": self.description,
-            "pictureUrl": self.picture_url
+            "pictureUrl": self.picture_url,
+            "tags": [tag.name for tag in self.tags]
         }
         return user_dict
 
