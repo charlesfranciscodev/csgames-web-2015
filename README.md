@@ -64,16 +64,16 @@ Connect to the client
 -  Tags (+2 points)
 -  picture
 
+### Candidate list (bonus +2 points)
+-  See their names and other relevant infos (+3 pints)
+-  See only the candidates of the gender I’m interested in (+1 point)
+-  See only the candidates interested in my gender (+1 point)
+
 ### Bonus Functionalities
 -  **Bonus**
 -  Mobile Friendly (+2 points)
 -  Beautiful Icons (fontawesome) (+1 point)
 -  Custom font (not native in browser) (+1 point)
-
-### Candidate list (bonus +2 points)
--  See their names and other relevant infos (+3 pints)
--  See only the candidates of the gender I’m interested in (+1 point)
--  See only the candidates interested in my gender (+1 point)
 
 ## API Routes
 
