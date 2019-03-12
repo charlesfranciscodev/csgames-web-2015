@@ -69,6 +69,12 @@ Connect to the client
 -  See only the candidates of the gender I’m interested in (+1 point)
 -  See only the candidates interested in my gender (+1 point)
 
+### Advanced candidate list
+-  Filters:
+   -  By age range (+2 points)
+   -  By tags (+2 points)
+-  Sorting by name
+
 ### Bonus Functionalities
 -  **Bonus**
 -  Mobile Friendly (+2 points)
@@ -162,3 +168,4 @@ Response
 * [Flask](http://flask.pocoo.org/)
 * [React](https://reactjs.org/)
 * [gender formats &middot; Microformats Wiki](http://microformats.org/wiki/gender-formats)
+* [https://placezombie.com/](http://placezombie.com/)

@@ -37,7 +37,7 @@ def seed_db():
             user_object.birthdate = dateutil.parser.parse(user["birthdate"])
             user_object.gender = user["gender"]
             user_object.interested_in = user["interestedIn"]
-            user_object.picture_url= user["pictureURL"]
+            user_object.picture_url= user["pictureUrl"]
             user_object.hashed_password = user["hashedPassword"]
             user_object.description = user["description"]
             for tag_id in user["tags"]:

@@ -65,7 +65,7 @@ class UserProfile extends Component {
             <div className="tile is-6 is-parent">
               <article className="tile is-child box">
                 <figure className="image">
-                  <img src={user.pictureUrl} />
+                  <img src={user.pictureUrl} alt={user.name} />
                 </figure>
               </article>
             </div>
