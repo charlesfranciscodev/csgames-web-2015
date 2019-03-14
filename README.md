@@ -1,6 +1,6 @@
 # CSGames 2015 Web Competition
 
-salut salut
+salut salut salut
 
 ## Start the server and the client
 `make`
