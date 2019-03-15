@@ -3,7 +3,7 @@ import jwt
 
 from flask import current_app
 from project import db
-
+from sqlalchemy.ext.hybrid import hybrid_property
 
 user_tag = db.Table(
     "user_tag",
@@ -23,6 +23,22 @@ user_tag = db.Table(
     )
 )
 
+
+class Rating(db.Model):
+    __tablename__ = "rating"
+    from_user_id = db.Column(
+        db.Integer,
+        db.ForeignKey("user.user_id", onupdate="CASCADE", ondelete="CASCADE"),
+        primary_key=True
+    )
+    to_user_id = db.Column(
+        db.Integer,
+        db.ForeignKey("user.user_id", onupdate="CASCADE", ondelete="CASCADE"),
+        primary_key=True
+    )
+    stars = db.Column(db.Integer, nullable=False)
+
+
 class User(db.Model):
     __tablename__ = "user"
     user_id = db.Column(db.Integer, primary_key=True)
@@ -36,7 +52,13 @@ class User(db.Model):
     hashed_password = db.Column(db.String(64), nullable=False)
     tags = db.relationship(
         "Tag", secondary=user_tag, lazy="subquery",
-        backref=db.backref("user_tags", lazy=True)
+        backref=db.backref("users", lazy=True)
+    )
+    ratings = db.relationship(
+        "Rating",
+        secondary="rating",
+        primaryjoin="rating.c.to_user_id == user.c.user_id",
+        secondaryjoin="rating.c.from_user_id == user.c.user_id"
     )
 
     def to_json(self):
@@ -49,9 +71,17 @@ class User(db.Model):
             "interestedIn": self.interested_in,
             "description": self.description,
             "pictureUrl": self.picture_url,
-            "tags": [tag.name for tag in self.tags]
+            "tags": [tag.name for tag in self.tags],
+            "averageRating": self.average_rating
         }
         return user_dict
+
+    @hybrid_property
+    def average_rating(self):
+        stars = [rating.stars for rating in self.ratings]
+        if len(stars) == 0:
+            return 0
+        return round(sum(stars) / len(stars))
 
     def encode_auth_token(self):
         """Generates the auth token"""

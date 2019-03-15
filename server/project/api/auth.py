@@ -102,20 +102,3 @@ def logout():
     }
 
     return jsonify(response)
-
-
-@auth_blueprint.route("/users")
-def users():
-    users = User.query.all()
-    response = [user.to_json() for user in users]
-    return jsonify(response)
-
-
-@auth_blueprint.route("/user/<int:user_id>")
-def user(user_id):
-    user = User.query.filter_by(user_id=user_id).first()
-    if user is None:
-        response = {}
-        response["message"] = "Invalid user id"
-        return jsonify(response), 404
-    return jsonify(user.to_json())

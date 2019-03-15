@@ -1,0 +1,27 @@
+[
+  {
+    "fromUserId": 1,
+    "toUserId": 2,
+    "stars": 1
+  },
+  {
+    "fromUserId": 2,
+    "toUserId": 1,
+    "stars": 2
+  },
+  {
+    "fromUserId": 3,
+    "toUserId": 4,
+    "stars": 3
+  },
+  {
+    "fromUserId": 4,
+    "toUserId": 1,
+    "stars": 4
+  },
+  {
+    "fromUserId": 6,
+    "toUserId": 1,
+    "stars": 5
+  }
+]

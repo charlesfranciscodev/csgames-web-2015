@@ -4,7 +4,7 @@ import dateutil.parser
 from flask.cli import FlaskGroup
 
 from project import create_app, db
-from project.api.models import User, Tag
+from project.api.models import User, Tag, Rating
 
 app = create_app()
 cli = FlaskGroup(create_app=create_app)
@@ -44,6 +44,16 @@ def seed_db():
                 tag_object = Tag.query.filter_by(tag_id=tag_id).first()
                 user_object.tags.append(tag_object)
             db.session.add(user_object)
+    db.session.commit()
+
+    with open("ratings.json") as f:
+        ratings = json.load(f)
+        for rating in ratings:
+            rating_object = Rating()
+            rating_object.from_user_id = rating["fromUserId"]
+            rating_object.to_user_id = rating["toUserId"]
+            rating_object.stars = rating["stars"]
+            db.session.add(rating_object)
     db.session.commit()
 
 
