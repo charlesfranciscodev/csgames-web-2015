@@ -83,10 +83,6 @@ Connect to the client
 -  Beautiful Icons (fontawesome) (+1 point)
 -  Custom font (not native in browser) (+1 point)
 
-###  Ratings (bonus +3 points)
--  Rate someone (1 to 5 stars etc) on his profile (+3 points)
--  See my rating on my profile (+1 point)
-
 ## TODO
 
 ### Messaging (bonus +2 points)
