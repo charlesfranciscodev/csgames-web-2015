@@ -1,6 +1,6 @@
 # CSGames 2015 Web Competition
 
-salut salut salut
+Online Dating Platform for Zombies.
 
 ## Start the server and the client
 `make`
@@ -82,6 +82,52 @@ Connect to the client
 -  Mobile Friendly (+2 points)
 -  Beautiful Icons (fontawesome) (+1 point)
 -  Custom font (not native in browser) (+1 point)
+
+## TODO
+
+### Messaging (bonus +2 points)
+-  Send an in-app message to other candidates (+3 points)
+-  See the received messages (+2 points)
+-  See the sent messages (+2 points)
+-  See the message thread (+2 points)
+
+###  Dates (bonus +4 points)
+-  Ask someone on a date. Must contain date, place, message (+2 points)
+   -  Send the date from the persone profile (+1 point)
+   -  Send the date from messaging (+1 point)
+-  Accept a date (+2 points)
+-  See the dates I’ve sent and their status (+2 points)
+-  Set your availabilities (+2 points)
+-  Be able to send a date to someone only on his availabilities (+3 points)
+
+###  Ratings (bonus +3 points)
+-  Rate someone (numeric/stars etc.) on his profile (+3 points)
+-  Rate someone after a date (+1 point)
+-  See my rating on my profile (+1 point)
+-  Comment on someone profile (+3 points)
+-  Delete a comment from own profile (+2 points)
+
+###  Likes (Facebook style-ish) (bonus +3 points)
+-  Be able to like a candidate and see the people you like (+4 points)
+-  See the list of people who likes us (+2 points)
+   -  Be able to like the person back from the list (+1 point)
+-  Have a sitewise preference so that only people that you like can message you (+2 points)
+
+###  Notifications (bonus +4 points)
+-  Notification bar/panel/page + 2 points with at least one of :
+   -  likes + 2 points
+   -  ratings + 2 points
+   -  dates + 2 points
+   -  messages + 2 points
+
+###  Stalker Feed (events/activities) (bonus +3 points)
+-  See the list of site events (+2 points) with at least one of the following in it:
+   -  Likes (+2 points)
+   -  Rating (+2 points)
+   -  Dates (+2 points)
+   -  Comments (+2 points)
+-  Filter: See the activity of people I like only (+2 points)
+-  See activity of someone on his profile (+3 points)
 
 ## API Routes
 
