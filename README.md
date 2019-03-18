@@ -77,7 +77,7 @@ Connect to the client
    -  By tags (+2 points)
 -  Sorting by name
 
-###  Ratings (bonus +3 points)
+###  Ratings
 -  See my rating on my profile (+1 point)
 -  Rate someone (numeric/stars etc.) on his profile (+3 points)
 -  Comment on someone's profile (+3 points)
