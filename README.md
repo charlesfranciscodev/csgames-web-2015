@@ -106,7 +106,6 @@ Connect to the client
 ###  Ratings (bonus +3 points)
 -  Rate someone (numeric/stars etc.) on his profile (+3 points)
 -  Rate someone after a date (+1 point)
--  See my rating on my profile (+1 point)
 -  Comment on someone profile (+3 points)
 -  Delete a comment from own profile (+2 points)
 
