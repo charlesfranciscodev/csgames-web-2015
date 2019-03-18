@@ -79,6 +79,8 @@ Connect to the client
 
 ###  Ratings (bonus +3 points)
 -  See my rating on my profile (+1 point)
+-  Rate someone (numeric/stars etc.) on his profile (+3 points)
+-  Comment on someone's profile (+3 points)
 
 ### Bonus Functionalities
 -  **Bonus**
@@ -104,9 +106,7 @@ Connect to the client
 -  Be able to send a date to someone only on his availabilities (+3 points)
 
 ###  Ratings (bonus +3 points)
--  Rate someone (numeric/stars etc.) on his profile (+3 points)
 -  Rate someone after a date (+1 point)
--  Comment on someone profile (+3 points)
 -  Delete a comment from own profile (+2 points)
 
 ###  Likes (Facebook style-ish) (bonus +3 points)

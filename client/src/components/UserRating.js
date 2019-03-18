@@ -14,26 +14,25 @@ function UserRating(props) {
     <article className="media">
       <figure className="media-left">
         <p className="image is-64x64">
-          <img src={props.rating.fromUser.pictureUrl} />
+          <img src={props.rating.fromUser.pictureUrl} alt={props.rating.fromUser.name} />
         </p>
       </figure>
+
       <div className="media-content">
         <div className="content">
           <p>
             <strong>{props.rating.fromUser.name}</strong>
             <br/>
-
             {stars}
             <br/>
-
             {props.rating.comment}
           </p>
-
         </div>
       </div>
-      <div className="media-right">
+
+      {/* <div className="media-right">
         <button className="delete"></button>
-      </div>
+      </div> */}
     </article>
   );
 }
