@@ -10,19 +10,6 @@ from project.api.auth import authenticate
 app_blueprint = Blueprint("app_blueprint", __name__)
 
 
-@app_blueprint.route("/ping", methods=["GET"])
-@authenticate
-def ping(user_id):
-    response = {"message": "pong, {}".format(user_id)}
-    return jsonify(response)
-
-
-@app_blueprint.route("/hello")
-def hello():
-    response = {"message": "Hello world!"}
-    return jsonify(response)
-
-
 @app_blueprint.route("/tags")
 def tags():
     tags = Tag.query.all()
@@ -48,7 +35,8 @@ def user(user_id):
 
 
 @app_blueprint.route("/rating", methods=["POST"])
-def rating():
+@authenticate
+def rating(user_id):
     response = {}
     request_json = request.get_json()
 
@@ -61,6 +49,10 @@ def rating():
 
     from_user_id = request_json["fromUserId"]
     to_user_id = request_json["toUserId"]
+    if from_user_id == to_user_id or user_id != from_user_id:
+        response["message"] = "Invalid user id"
+        return jsonify(response), 401
+
     from_user = User.query.filter_by(user_id=from_user_id).first()
     to_user = User.query.filter_by(user_id=to_user_id).first()
     if from_user is None or to_user is None:

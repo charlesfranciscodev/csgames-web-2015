@@ -4,6 +4,15 @@ import { age } from "../helpers/age";
 function UserCard(props) {
   const years = age(props.user);
 
+  let averageStars = [];
+  for (let i = 0; i < props.user.averageStars; i++) {
+    averageStars.push(
+      <span key={i} className="icon has-text-danger">
+        <i className="fas fa-star"></i>
+      </span>
+    );
+  }
+
   return (
     <div className="column is-one-quarter-desktop is-half-tablet">
       <div className="card">
@@ -24,6 +33,8 @@ function UserCard(props) {
           </div>
 
           <div className="content">
+            {averageStars}
+            <br />
             {props.user.tags.join(", ")}
             <br />
             <span className="icon">

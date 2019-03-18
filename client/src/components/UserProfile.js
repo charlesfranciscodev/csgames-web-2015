@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import UserRating from "./UserRating";
 import { age } from "../helpers/age";
+import { authHeader } from "../helpers";
 
 class UserProfile extends Component {
   constructor(props) {
@@ -92,6 +93,7 @@ class UserProfile extends Component {
       const requestOptions = {
         method: "POST",
         headers: {
+          ...authHeader(),
           "Content-type": "application/json"
         },
         body: JSON.stringify(rating)
@@ -116,23 +118,35 @@ class UserProfile extends Component {
   }
 
   render() {
-    const { user, stars, comment, submitted} = this.state;
+    const { user, stars, comment, submitted, error} = this.state;
     const years = age(user);
 
     const currentUser = JSON.parse(localStorage.getItem("user"));
 
     let averageStars = [];
-    for (let i = 0; i < user.averageStars; i++) {
-      averageStars.push(
-        <span key={i} className="icon has-text-warning is-large">
-          <i className="fas fa-star fa-2x"></i>
-        </span>
-      );
+    if (user) {
+      for (let i = 0; i < user.averageStars; i++) {
+        averageStars.push(
+          <span key={i} className="icon has-text-warning is-large">
+            <i className="fas fa-star fa-2x"></i>
+          </span>
+        );
+      }
     }
 
     return (
       <div>
-      { this.state.user ? (
+      { error || !user ? (
+          <section className="section">
+          <div className="container">
+            <article className="message is-danger">
+              <div className="message-body">
+                {this.state.error}
+              </div>
+            </article>
+          </div>
+        </section>
+      ) : (
         <div>
           <section className="section">
             <div className="container">
@@ -224,16 +238,6 @@ class UserProfile extends Component {
             </div>
           </div>
         </div>
-      ) : (
-        <section className="section">
-          <div className="container">
-            <article className="message is-danger">
-              <div className="message-body">
-                {this.state.error}
-              </div>
-            </article>
-          </div>
-        </section>
       )}
       </div>
     );
