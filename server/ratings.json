@@ -2,26 +2,31 @@
   {
     "fromUserId": 1,
     "toUserId": 2,
-    "stars": 1
+    "stars": 1,
+    "comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris viverra id ex ornare pulvinar. Nullam ornare, risus vel euismod pretium, ante arcu tincidunt risus, sit amet faucibus ex eros ut enim. Curabitur ultrices euismod neque. Nunc et augue lectus. Maecenas id leo elementum, porta sem et, elementum arcu. Suspendisse venenatis, velit eu scelerisque aliquet, ipsum odio faucibus erat, ac consequat erat elit scelerisque leo. Suspendisse vulputate mi in erat rutrum finibus. Nullam in sapien nisl. Curabitur venenatis turpis eu turpis porta pulvinar."
   },
   {
     "fromUserId": 2,
     "toUserId": 1,
-    "stars": 2
+    "stars": 2,
+    "comment": "Donec sed placerat arcu. Nulla pellentesque risus urna. Suspendisse lobortis sapien enim, sed imperdiet erat consectetur id. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed porta, sapien nec faucibus varius, risus sapien aliquet purus, in condimentum tellus elit nec erat. Ut ac finibus ante. Quisque velit leo, volutpat ac mi et, faucibus lobortis ipsum. Sed sed lacinia odio. Ut porta luctus libero a vestibulum. Mauris auctor iaculis tellus, eget ornare elit ornare ac. Morbi tincidunt gravida vestibulum. Vivamus tristique in orci rutrum rutrum. Fusce tristique ligula eu risus mattis scelerisque. Nulla facilisi. Vestibulum augue leo, fermentum eu auctor sit amet, sodales nec ex."
   },
   {
     "fromUserId": 3,
     "toUserId": 4,
-    "stars": 3
+    "stars": 3,
+    "comment": "Duis eget ex augue. Maecenas scelerisque lectus aliquam risus pretium, vel accumsan eros blandit. Suspendisse molestie a magna a congue. Duis fermentum id orci in tincidunt. Phasellus auctor imperdiet nulla aliquet pulvinar. Phasellus sit amet nisl metus. Ut vitae facilisis libero. Donec in venenatis lorem, a dapibus sem. In pulvinar lacus at nisi facilisis pharetra. Proin faucibus varius quam, nec sollicitudin augue laoreet id."
   },
   {
     "fromUserId": 4,
     "toUserId": 1,
-    "stars": 4
+    "stars": 4,
+    "comment": "Pellentesque nulla tortor, tincidunt vitae scelerisque eget, finibus vel lectus. Sed mi ipsum, pharetra eu hendrerit nec, dapibus eu elit. Aenean mi eros, cursus in tortor nec, tempor sodales libero. Praesent dictum mauris vel quam cursus, nec bibendum enim vestibulum. Sed suscipit blandit tempor. Curabitur eget finibus ex, at egestas libero. Nulla lacinia hendrerit sapien at blandit. Nullam nibh erat, dignissim et suscipit maximus, porttitor non mi. Proin tincidunt feugiat augue vitae aliquet. Donec vel viverra nisi, nec faucibus lacus."
   },
   {
     "fromUserId": 6,
     "toUserId": 1,
-    "stars": 5
+    "stars": 5,
+    "comment": "Vivamus a vehicula dui, non suscipit justo. Nunc eros risus, interdum ac faucibus a, tristique non tellus. In vitae fringilla ex, ut hendrerit eros. Ut facilisis finibus massa, id cursus est luctus a. Nulla non magna finibus, gravida eros id, molestie ligula. Nulla tempor aliquet magna rhoncus posuere. Proin faucibus felis eu felis scelerisque fringilla. Donec malesuada sit amet velit sed sollicitudin. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque felis sapien, dapibus eu maximus sit amet, blandit eu dolor. Sed accumsan condimentum aliquam. Quisque eu felis efficitur, lacinia orci quis, ullamcorper orci. Nullam tincidunt tempor posuere. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed sagittis semper orci, in iaculis nisl commodo et. Nunc pretium, dolor sed dapibus tempus, augue velit dapibus felis, non commodo est erat eget ante."
   }
 ]

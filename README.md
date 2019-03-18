@@ -77,6 +77,9 @@ Connect to the client
    -  By tags (+2 points)
 -  Sorting by name
 
+###  Ratings (bonus +3 points)
+-  See my rating on my profile (+1 point)
+
 ### Bonus Functionalities
 -  **Bonus**
 -  Mobile Friendly (+2 points)

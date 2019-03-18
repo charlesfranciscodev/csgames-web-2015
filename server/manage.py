@@ -53,6 +53,7 @@ def seed_db():
             rating_object.from_user_id = rating["fromUserId"]
             rating_object.to_user_id = rating["toUserId"]
             rating_object.stars = rating["stars"]
+            rating_object.comment = rating["comment"]
             db.session.add(rating_object)
     db.session.commit()
 

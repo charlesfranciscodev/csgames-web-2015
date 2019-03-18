@@ -37,6 +37,7 @@ class Rating(db.Model):
         primary_key=True
     )
     stars = db.Column(db.Integer, nullable=False)
+    comment = db.Column(db.Text, nullable=False)
 
 
 class User(db.Model):
@@ -72,16 +73,33 @@ class User(db.Model):
             "description": self.description,
             "pictureUrl": self.picture_url,
             "tags": [tag.name for tag in self.tags],
-            "averageRating": self.average_rating
+            "averageStars": self.average_stars,
+            "allRatings": self.all_ratings
         }
         return user_dict
 
     @hybrid_property
-    def average_rating(self):
+    def average_stars(self):
         stars = [rating.stars for rating in self.ratings]
         if len(stars) == 0:
             return 0
         return round(sum(stars) / len(stars))
+
+    @hybrid_property
+    def all_ratings(self):
+        ratings = []
+        for rating in self.ratings:
+            rating_dict = {}
+            user = User.query.filter_by(user_id=rating.from_user_id).first()
+            rating_dict["fromUser"] = {
+                "userId": user.user_id,
+                "name": user.name,
+                "pictureUrl": user.picture_url
+            }
+            rating_dict["stars"] = rating.stars
+            rating_dict["comment"] = rating.comment
+            ratings.append(rating_dict)
+        return ratings
 
     def encode_auth_token(self):
         """Generates the auth token"""
