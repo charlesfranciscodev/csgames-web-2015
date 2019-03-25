@@ -148,3 +148,19 @@ class Tag(db.Model):
             "name": self.name
         }
         return tag_dict
+
+
+# class Message(db.Model):
+#     __tablename__ = "message"
+#     from_user_id = db.Column(
+#         db.Integer,
+#         db.ForeignKey("user.user_id", onupdate="CASCADE", ondelete="CASCADE"),
+#         primary_key=True
+#     )
+#     to_user_id = db.Column(
+#         db.Integer,
+#         db.ForeignKey("user.user_id", onupdate="CASCADE", ondelete="CASCADE"),
+#         primary_key=True
+#     )
+#     content = db.Column(db.Text, nullable=False)
+#     date_time = db.Column(db.DateTime, nullable=False)
