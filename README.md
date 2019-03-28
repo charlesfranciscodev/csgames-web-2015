@@ -90,7 +90,7 @@ Connect to the client
 
 ## TODO
 
-### Messaging (bonus +2 points)
+### Messaging (Public Chat)
 -  Send an in-app message to other candidates (+3 points)
 -  See the received messages (+2 points)
 -  See the sent messages (+2 points)
@@ -219,3 +219,4 @@ Response
 * [React](https://reactjs.org/)
 * [gender formats &middot; Microformats Wiki](http://microformats.org/wiki/gender-formats)
 * [https://placezombie.com/](http://placezombie.com/)
+* [How to use a single instance of Socket.IO in your React app](https://itnext.io/how-to-use-a-single-instance-of-socket-io-in-your-react-app-6a4465dcb398?fbclid=IwAR0UcC8B7044_DeaC15fElk0ODU761uS_hiraknETg4WOzX43JNShoxYDGU)

@@ -7,8 +7,13 @@ import { RegisterPage } from "./components/RegisterPage"
 import { Router, Route } from "react-router-dom";
 import { connect } from "react-redux";
 import { history } from "./helpers";
-import { alertActions } from './actions';
+import { alertActions } from "./actions";
 import UserProfile from "./components/UserProfile";
+
+import SocketContext from "./socket-context";
+import * as io from "socket.io-client";
+
+const socket = io();
 
 class App extends Component {
   constructor(props) {
@@ -31,26 +36,28 @@ class App extends Component {
     const { alert } = this.props;
     return (
       <div>
-        <Router history={history}>
-          <div>
-            <NavBar />
+        <SocketContext.Provider value={socket}>
+          <Router history={history}>
+            <div>
+              <NavBar />
 
-            {alert.message &&
-              <div className="container">
-                <div
-                className={`notification + ${alert.type}`}>
-                  <button className="delete" onClick={this.alertButtonClick} />
-                  { alert.message }
+              {alert.message &&
+                <div className="container">
+                  <div
+                  className={`notification + ${alert.type}`}>
+                    <button className="delete" onClick={this.alertButtonClick} />
+                    { alert.message }
+                  </div>
                 </div>
-              </div>
-            }
+              }
 
-            <Route exact path="/" component={HomePage} />
-            <Route path="/login" component={LoginPage} />
-            <Route path="/register" component={RegisterPage} />
-            <Route path="/user/:userId" component={UserProfile} />
-          </div>
-        </Router>
+              <Route exact path="/" component={HomePage} />
+              <Route path="/login" component={LoginPage} />
+              <Route path="/register" component={RegisterPage} />
+              <Route path="/user/:userId" component={UserProfile} />
+            </div>
+          </Router>
+        </SocketContext.Provider>
       </div>
     );
   }
