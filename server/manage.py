@@ -3,10 +3,10 @@ import dateutil.parser
 
 from flask.cli import FlaskGroup
 
-from project import create_app, db
+from project import create_app, socketio, db
 from project.api.models import User, Tag, Rating
 
-app = create_app()
+from start import app
 cli = FlaskGroup(create_app=create_app)
 
 

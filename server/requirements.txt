@@ -5,3 +5,4 @@ flask-cors
 python-dateutil
 pyjwt
 flask_socketio
+eventlet
