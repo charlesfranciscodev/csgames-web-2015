@@ -1,0 +1,17 @@
+[
+  {
+    "fromUserId": 1,
+    "content": "Lorem ipsum dolor sit amet",
+    "date_time": "2018-01-01T00:00:00Z"
+  },
+  {
+    "fromUserId": 2,
+    "content": "Donec sed placerat arcu",
+    "date_time": "2019-03-28T18:00:00Z"
+  },
+  {
+    "fromUserId": 3,
+    "content": "Duis eget ex augue",
+    "date_time": "2019-03-28T18:02:00Z"
+  }
+]

@@ -150,17 +150,29 @@ class Tag(db.Model):
         return tag_dict
 
 
-# class Message(db.Model):
-#     __tablename__ = "message"
-#     from_user_id = db.Column(
-#         db.Integer,
-#         db.ForeignKey("user.user_id", onupdate="CASCADE", ondelete="CASCADE"),
-#         primary_key=True
-#     )
-#     to_user_id = db.Column(
-#         db.Integer,
-#         db.ForeignKey("user.user_id", onupdate="CASCADE", ondelete="CASCADE"),
-#         primary_key=True
-#     )
-#     content = db.Column(db.Text, nullable=False)
-#     date_time = db.Column(db.DateTime, nullable=False)
+class Message(db.Model):
+    __tablename__ = "message"
+    message_id = db.Column(db.Integer, primary_key=True)
+    from_user_id = db.Column(
+        db.Integer,
+        db.ForeignKey("user.user_id", onupdate="CASCADE", ondelete="CASCADE")
+    )
+    content = db.Column(db.Text, nullable=False)
+    date_time = db.Column(db.DateTime, nullable=False)
+
+    def to_json(self):
+        user = User.query.filter_by(user_id=self.from_user_id).first()
+        message_dict = {
+            "messageId": self.message_id,
+            "dateTime": {
+                "date": self.date_time.date().isoformat(),
+                "time": self.date_time.time().isoformat(),
+            },
+            "fromUser": {
+                "userId": self.from_user_id,
+                "pictureUrl": user.picture_url,
+                "name": user.name
+            },
+            "content": self.content
+        }
+        return message_dict

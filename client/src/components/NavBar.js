@@ -56,6 +56,17 @@ class NavBar extends Component {
                 Home
               </span>
             </a>
+
+            { user &&
+            <a className="navbar-item" href="/messages">
+              <span className="icon">
+                <i className="fas fa-comments"></i>
+              </span>
+              <span>
+                Messages
+              </span>
+            </a>
+            }
           </div>
 
           { user ? (

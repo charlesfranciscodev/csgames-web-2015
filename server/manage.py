@@ -4,7 +4,7 @@ import dateutil.parser
 from flask.cli import FlaskGroup
 
 from project import create_app, socketio, db
-from project.api.models import User, Tag, Rating
+from project.api.models import User, Tag, Rating, Message
 
 from start import app
 cli = FlaskGroup(create_app=create_app)
@@ -55,6 +55,16 @@ def seed_db():
             rating_object.stars = rating["stars"]
             rating_object.comment = rating["comment"]
             db.session.add(rating_object)
+    db.session.commit()
+
+    with open("messages.json") as f:
+        messages = json.load(f)
+        for message in messages:
+            message_object = Message()
+            message_object.from_user_id = message["fromUserId"]
+            message_object.content = message["content"]
+            message_object.date_time = dateutil.parser.parse(message["date_time"])
+            db.session.add(message_object)
     db.session.commit()
 
 

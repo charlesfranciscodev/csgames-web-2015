@@ -90,7 +90,7 @@ Connect to the client
 
 ## TODO
 
-### Messaging (Public Chat)
+### Messaging (Real Time Public Chat)
 -  Send an in-app message to other candidates (+3 points)
 -  See the received messages (+2 points)
 -  See the sent messages (+2 points)
