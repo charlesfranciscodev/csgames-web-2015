@@ -23,10 +23,6 @@
     <br>
     <br>
 
-    Room to Join: <input type="text" id="room_to_join">
-    <button id="join_room">Join Room</button>
-    <button id="leave_room">Leave Room</button>
-
     <button id="disconnect">Disconnect</button>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js"></script>
@@ -74,46 +70,9 @@
           console.log(msg);
       });
 
-      $('#join_room').on('click', function() {
-          var room = $('#room_to_join').val();
-
-          private_socket.emit('join_room', room);
-      });
-
-      private_socket.on('room_message', function(msg) {
-          console.log(msg);
-      });
-
-      $('#leave_room').on('click', function() {
-          var room = $('#room_to_join').val();
-
-          private_socket.emit('leave_the_room', room);
-      });
-
       $('#disconnect').on('click', function() {
           private_socket.emit('disconnect_me', 'disconnect');
       });
-
-
-      /*
-
-      socket.on('connect', function() {
-
-          socket.send('I am now connected!');
-
-          socket.emit('custom event', {'name' : 'Anthony'});
-
-          socket.on('from flask', function(msg) {
-              console.log(msg['extension']);
-          });
-
-          socket.on('message', function(msg) {
-              console.log(msg);
-          });
-          
-      });
-
-      */
 
       });
 
