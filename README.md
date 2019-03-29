@@ -2,6 +2,13 @@
 
 Online Dating Platform for Zombies.
 
+## Competition Description
+
+It’s the end of the world as we know it… (And nobody feels fine, except R.E.M. maybe). A few years ago, a Zombie virus appeared. It didn’t appear to be really harmful and nothing was really done to counter it. However, 6 months ago, it mutated and a new race of super intelligent zombie has emerged. You are the last group of survivors and are maintained captive by a group of zombies. The chief of the horde is commanding you to create a new dating site for his son (who is not ugly enough to be popular among zombiettes).
+
+## Advanced candidate list + User Profile
+![Candidates](candidates.png)
+
 ## Start the server and the client
 `make`
 
