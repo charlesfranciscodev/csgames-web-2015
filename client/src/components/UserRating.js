@@ -12,9 +12,11 @@ function UserRating(props) {
 
   return (
     <article className="media">
+    
       <figure className="media-left">
         <p className="image is-64x64">
-          <img src={props.rating.fromUser.pictureUrl} alt={props.rating.fromUser.name} />
+          <img src={props.rating.fromUser.pictureUrl}
+          alt={props.rating.fromUser.name} />
         </p>
       </figure>
 

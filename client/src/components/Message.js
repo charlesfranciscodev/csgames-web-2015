@@ -3,9 +3,11 @@ import React from "react";
 function Message(props) {
   return (
     <article className="media">
+    
       <figure className="media-left">
         <p className="image is-32x32">
-          <img src={props.message.fromUser.pictureUrl} alt={props.message.fromUser.name} />
+          <img src={props.message.fromUser.pictureUrl}
+          alt={props.message.fromUser.name} />
         </p>
       </figure>
 
@@ -14,10 +16,11 @@ function Message(props) {
           <p>
             <strong className="has-text-danger">{props.message.fromUser.name}</strong> <small>{props.message.dateTime.date} {props.message.dateTime.time}</small>
             <br/>
-            <span className="has-text-info">{props.message.content}</span>
+            {props.message.content}
           </p>
         </div>
       </div>
+
     </article>
   );
 }

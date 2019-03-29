@@ -37,7 +37,7 @@
 
 
       $("#disconnect").on("click", function() {
-          private_socket.emit("disconnect_me", "disconnect");
+        socket_messages.emit("disconnect_me", "disconnect");
       });
     });
   </script>

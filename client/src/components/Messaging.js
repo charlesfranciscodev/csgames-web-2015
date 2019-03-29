@@ -1,21 +1,41 @@
 import React, { Component } from "react";
 import Message from "./Message";
 
+import SocketContext from "../socket-context";
+
 class Messages extends Component {
   constructor(props) {
     super(props);
     this.state = {
       messages: [],
+      content: "",
       error: ""
     };
-    this.getUser = this.getUser.bind(this);
+    this.getUser = this.getMessages.bind(this);
+    this.onChange = this.onChange.bind(this);
+    this.handlePost = this.handlePost.bind(this);
+    this.handleNewMessage = this.handleNewMessage.bind(this);
   }
 
   componentDidMount() {
-    this.getUser();
+    this.getMessages();
+
+    this.props.socket.on("message_from_server", this.handleNewMessage);
   }
 
-  getUser() {
+  handleNewMessage(message) {
+    this.setState({
+      messages: [...this.state.messages, message]
+    });
+  }
+
+  onChange(e) {
+    this.setState({
+      [e.target.name]: e.target.value
+    });
+  }
+
+  getMessages() {
     const url = `${process.env.REACT_APP_SERVICE_URL}/messages`;
 
     function handleResponse(response) {
@@ -31,6 +51,17 @@ class Messages extends Component {
     .then(handleResponse)
     .then(data => this.setState({ messages: data }))
     .catch(error => this.setState({ error: error }));
+  }
+
+  handlePost() {
+    const currentUser = JSON.parse(localStorage.getItem("user"));
+    let payload = {
+      "fromUserId": currentUser.userId,
+      "content": this.state.content
+    }
+    if (payload.fromUserId && payload.content) {
+      this.props.socket.emit("message_from_user", payload);
+    }
   }
 
   render() {
@@ -51,7 +82,6 @@ class Messages extends Component {
             </div>
           </section>
         ) : (
-          // All Messages
           <div>
             <section className="section has-background-grey-lighter">
               <div className="container">
@@ -72,19 +102,25 @@ class Messages extends Component {
                   <article className="media">
                   <figure className="media-left">
                     <p className="image is-32x32">
-                      <img src={currentUser.pictureUrl} />
+                      <img src={currentUser.pictureUrl} alt={currentUser.name} />
                     </p>
                   </figure>
+
                   <div className="media-content">
                     <div className="field">
                       <p className="control">
-                        <textarea className="textarea" placeholder="Post your message..."></textarea>
+                        <textarea
+                          className="textarea"
+                          placeholder="Write your message..."
+                          name="content"
+                          value={this.state.content}
+                          onChange={this.onChange}/>
                       </p>
                     </div>
                     <nav className="level">
                       <div className="level-left">
                         <div className="level-item">
-                          <a className="button is-info">Post</a>
+                          <button onClick={this.handlePost} className="button is-info">Post</button>
                         </div>
                       </div>
                     </nav>
@@ -94,12 +130,16 @@ class Messages extends Component {
               </section>
             }
             </div>
-
-          // Post a new message in real time 
         )}
       </div>
     );
   }
 }
 
-export default Messages;
+const MessagesWithSocket = props => (
+  <SocketContext.Consumer>
+    {socket => <Messages {...props} socket={socket} />}
+  </SocketContext.Consumer>
+)
+  
+export default MessagesWithSocket;

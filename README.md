@@ -88,13 +88,13 @@ Connect to the client
 -  Beautiful Icons (fontawesome) (+1 point)
 -  Custom font (not native in browser) (+1 point)
 
-## TODO
-
 ### Messaging (Real Time Public Chat)
 -  Send an in-app message to other candidates (+3 points)
 -  See the received messages (+2 points)
 -  See the sent messages (+2 points)
 -  See the message thread (+2 points)
+
+## TODO
 
 ###  Dates (bonus +4 points)
 -  Ask someone on a date. Must contain date, place, message (+2 points)
