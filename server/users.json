@@ -8,7 +8,7 @@
     "interestedIn": "F",
     "name": "Brandon Mason",
     "password": "Password_1",
-    "pictureUrl": "https://charlesfranciscodev.github.io/assets/images/zombies/malezombie1.jpeg",
+    "pictureUrl": "https://charlesfranciscodev.github.io/images/zombies/malezombie1.jpeg",
     "tags": [
       1
     ]
@@ -22,7 +22,7 @@
     "interestedIn": "M",
     "name": "Eileen Mcdonalid",
     "password": "Password_2",
-    "pictureUrl": "https://charlesfranciscodev.github.io/assets/images/zombies/femalezombie1.jpeg",
+    "pictureUrl": "https://charlesfranciscodev.github.io/images/zombies/femalezombie1.jpeg",
     "tags": [
       1
     ]
@@ -36,7 +36,7 @@
     "interestedIn": "F",
     "name": "Ted Little",
     "password": "Password_3",
-    "pictureUrl": "https://charlesfranciscodev.github.io/assets/images/zombies/malezombie2.jpeg",
+    "pictureUrl": "https://charlesfranciscodev.github.io/images/zombies/malezombie2.jpeg",
     "tags": [
       1,
       2,
@@ -52,7 +52,7 @@
     "interestedIn": "M",
     "name": "Linda Hudson",
     "password": "Password_4",
-    "pictureUrl": "https://charlesfranciscodev.github.io/assets/images/zombies/femalezombie2.jpeg",
+    "pictureUrl": "https://charlesfranciscodev.github.io/images/zombies/femalezombie2.jpeg",
     "tags": [
       3,
       4,
@@ -68,7 +68,7 @@
     "interestedIn": "F",
     "name": "Stanley Sutton",
     "password": "Password_5",
-    "pictureUrl": "https://charlesfranciscodev.github.io/assets/images/zombies/malezombie3.jpeg",
+    "pictureUrl": "https://charlesfranciscodev.github.io/images/zombies/malezombie3.jpeg",
     "tags": [
       5,
       6,
@@ -84,7 +84,7 @@
     "interestedIn": "M",
     "name": "Danielle Walker",
     "password": "Password_6",
-    "pictureUrl": "https://charlesfranciscodev.github.io/assets/images/zombies/femalezombie3.jpeg",
+    "pictureUrl": "https://charlesfranciscodev.github.io/images/zombies/femalezombie3.jpeg",
     "tags": [
       8,
       9,
@@ -100,7 +100,7 @@
     "interestedIn": "M",
     "name": "Rick Carter",
     "password": "Password_7",
-    "pictureUrl": "https://charlesfranciscodev.github.io/assets/images/zombies/malezombie4.jpeg",
+    "pictureUrl": "https://charlesfranciscodev.github.io/images/zombies/malezombie4.jpeg",
     "tags": [
       6
     ]
@@ -114,7 +114,7 @@
     "interestedIn": "F",
     "name": "Mary Nichols",
     "password": "Password_8",
-    "pictureUrl": "https://charlesfranciscodev.github.io/assets/images/zombies/femalezombie5.jpeg",
+    "pictureUrl": "https://charlesfranciscodev.github.io/images/zombies/femalezombie5.jpeg",
     "tags": [
       5,
       10
@@ -129,7 +129,7 @@
     "interestedIn": "M",
     "name": "Darryl Hunter",
     "password": "Password_9",
-    "pictureUrl": "https://charlesfranciscodev.github.io/assets/images/zombies/malezombie5.jpeg",
+    "pictureUrl": "https://charlesfranciscodev.github.io/images/zombies/malezombie5.jpeg",
     "tags": [
       2,
       6,
