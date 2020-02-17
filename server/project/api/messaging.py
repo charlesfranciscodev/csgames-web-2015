@@ -29,7 +29,7 @@ def receive_message(payload):
 
 
 @socketio.on("disconnect_me", namespace="/messages")
-def disconnect_me(message):
+def disconnect_me():
     disconnect()
 
 
