@@ -11,7 +11,7 @@ class Messages extends Component {
       content: "",
       error: ""
     };
-    this.getUser = this.getMessages.bind(this);
+    this.getMessages = this.getMessages.bind(this);
     this.onChange = this.onChange.bind(this);
     this.handlePost = this.handlePost.bind(this);
     this.handleNewMessage = this.handleNewMessage.bind(this);
