@@ -1,4 +1,3 @@
-import sys
 import hashlib
 import dateutil.parser
 from functools import wraps
@@ -63,7 +62,10 @@ def register():
     request_json = request.get_json()
 
     # Validation
-    keys = ["email", "name", "birthdate", "gender", "interestedIn", "description", "pictureURL", "password", "tags"]
+    keys = [
+        "email", "name", "birthdate", "gender", "interestedIn", "description", "pictureURL",
+        "password", "tags",
+    ]
     for key in keys:
         if key not in request_json:
             response["message"] = "Missing {} key in request body".format(key)

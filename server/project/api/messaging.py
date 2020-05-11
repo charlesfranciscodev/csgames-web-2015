@@ -1,11 +1,10 @@
-import sys
 import datetime
 
-from flask import Blueprint, request, jsonify, render_template
+from flask import Blueprint, jsonify, render_template
 from flask_socketio import emit, disconnect
 
 from project import socketio, db
-from project.api.models import User, Message
+from project.api.models import Message
 
 from sqlalchemy import asc
 

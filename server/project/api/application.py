@@ -1,5 +1,3 @@
-import sys
-
 from flask import Blueprint, jsonify, request
 
 from project import db
