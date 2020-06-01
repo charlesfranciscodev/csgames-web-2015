@@ -1,6 +1,8 @@
 # CSGames 2015 Web Competition
 
-Online Dating Platform for Zombies.
+Online Dating Platform with React, Redux, Python and Docker.
+
+Features: Authentication, User Profile, Candidate list with filters and sorting, Ratings, Real Time Messaging
 
 ## Competition Description
 
